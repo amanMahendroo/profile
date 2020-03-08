@@ -106,18 +106,50 @@ body {
 }
 
 .container .list {
-	width: 22vw;
+	width: 32vw;
+	height: 11vh;
 	margin-top: 2vh;
 	margin-left: 12vw;
+	padding-left: 50px;
 	display: block;
 	color: #005;
-	line-height: 10vh;
+	line-height: 11vh;
 	font-size: 2em;
 	font-family: Segoe UI Light;
 	font-weight: lighter;
 	letter-spacing: 1px;
 	cursor: pointer;
+	overflow: hidden;
+	/*overflow-x: initial;*/
 }
+
+.container .list .hide {
+	background: #ccc;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	top: -100%;
+	transition: .25s all ease;
+}
+
+.container .list .no-hide {
+	top: -200%;
+}
+
+.container .list .hover {
+	width: 2px;
+	height: 50%;
+	background: #005;
+	position: relative;
+	left: -10px;
+	top: -99%;
+	transition: .25s all ease;
+}
+
+.container .list:hover .hover {
+	top: -175%;
+}
+
 
 .main {
 	width: 100vw;
@@ -145,6 +177,47 @@ body {
 	font-size: 5em;
 }
 
+.main .scroll {
+	width: 70px;
+	height: 70px;
+	/*background: #f00;*/
+	border-radius: 100%;
+	text-align: center;
+	line-height: 70px;
+	color: #ccc7;
+	position: absolute;
+	z-index: 100;
+	top: 75vh;
+	left: 47vw;
+	transform: rotate(180deg);
+	font-size: 4em;
+	/*border: 1px solid #ccc;*/
+	cursor: pointer;
+	/*transition: .25s all ease;*/
+}
+
+.main .scroll div {
+	position: relative;
+	display: inline;
+	margin: 0 -23px;
+	top: 15px;
+}
+
+.main .scroll:hover div {
+	top: -15px;
+}
+
+.main .scroll .a {
+	transition: .25s all ease;
+}
+
+.main .scroll .b {
+	transition: .5s all cubic-bezier(0.5, 0, 0.1, 1);
+}
+
+.main .scroll .c {
+	transition: .75s all cubic-bezier(0.5, 0, 0.1, 1);
+}
 
 .skills {
 	background: #fff;
@@ -178,7 +251,7 @@ body {
 	width: 120%;
 	height: 30px;
 	line-height: 30px;
-	background: #ccc;
+	background: #eee;
 	font-family: Segoe UI Light;
 	font-style: italic;
 	text-align: center;
@@ -213,14 +286,39 @@ body {
 .skills .stats {
 	float: right;
 	margin: -40vh 50px;
-	width: 60vw;
+	width: 45vw;
 
+}
+
+.skills .list {
+	/*background: #f007;*/
+	height: 70px;
+	margin: 10px 0;
+	position: relative;
+	left: -400px;
+	opacity: 0;
+	transition: .5s all ease;
+}
+
+.skills .open-list {
+	left: 0;
+	opacity: 100;
+}
+
+.skills .list .icon {
+	/*background: #f007;*/
+	width: 50px;
+	height: 50px;
+	float: left;
+	filter: grayscale(100%);
 }
 
 .skills progress {
 	-webkit-appearance: none;
 	height: 5px;
-	width: 50vw;
+	width: 35vw;
+	float: right;
+	margin: 20px 10px;
 }
 
 .skills progress::-webkit-progress-bar {
