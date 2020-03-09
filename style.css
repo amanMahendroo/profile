@@ -237,7 +237,7 @@ body {
 .skills .code {
 	width: 300px;
 	height: 200px;
-	margin-left: 100px;
+	margin-left: 10vw;
 	border-radius: 20px;
 	box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 0.2);
 	background: #333;
@@ -329,4 +329,46 @@ body {
 .skills progress::-webkit-progress-value {
 	background: #005;
 	border-radius: 5px;
+}
+
+
+@media screen and (max-width: 900px) {
+	.main .title {
+		top: 20vh;
+		left: 0;
+		width: 100vw;
+		text-align: center;
+		font-size: .7em;
+	}
+
+	.main .title .tag {
+		font-size: 1.3em;
+	}
+
+	.skills .title {
+		margin: 100px 0 0 100px;
+	}
+
+	.skills .code {
+		position: relative;
+		top: -12vh;
+		left: 30vw;
+		font-size: 0.9em;
+		width: 250px;
+		height: 150px;
+	}
+
+	.skills .head .g, .skills .head .o, .skills .head .r {
+		left: -100px;
+	}
+
+	.skills .stats {
+		width: 80vw;
+		margin-top: -10vh;
+		float: none;
+	}
+
+	.skills progress {
+		width: 60vw;
+	}
 }
